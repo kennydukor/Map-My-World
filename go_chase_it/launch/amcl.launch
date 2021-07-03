@@ -1,0 +1,25 @@
+<launch>
+	<!-- TODO: Add nodes here -->
+
+	<!--Map Server Node :: http://wiki.ros.org/map_server-->
+	<arg name="map_file" default="$(find go_chase_it)/maps/world_map.yaml"/> 	<!--add an argument of the path to your map file so that you could easily change the map loaded and avoid typing long paths again-->
+	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
+
+	<!--AMCL Node :: http://wiki.ros.org/amcl-->
+	<!--By default, amcl package will look for the scan topic for LiDAR data. In the simulation, the Hokuyo LiDAR sensor actually publishes on the <YOUR PACKAGE NAME>/laser/scan topic. We will use the remap tag to remap the topic name scan to the actual topic name so that the amcl package could use it! :: http://wiki.ros.org/roslaunch/XML/remap-->
+
+	<node name="amcl" pkg="amcl" type="amcl" output="screen"> 
+		<remap from="scan" to="<go_chase_it>/laser/scan"/>
+		<param name="odom_frame_id" value="odom"/>
+		<param name="odom_model_type" value="diff-corrected"/>
+		<param name="base_frame_id" value="robot_footprint"/>
+		<param name="global_frame_id" value="map"/>
+	</node>
+
+	<!-- If you choose to define initial pose here (Rviz)-->
+	<param name="initial_pose_x" value="1.923170"/>
+	<param name="initial_pose_y" value="2.655713"/>
+
+	<!--Move Base Node-->
+	<node name="move_base" pkg="move_base" type="move_base"/>
+</launch>
