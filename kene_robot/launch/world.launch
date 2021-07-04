@@ -11,11 +11,11 @@
 	<arg name="yaw" default="0"/>
 
 	<!-- Launch other relevant files-->
-	<include file="$(find go_chase_it)/launch/robot_description.launch"/>
+	<include file="$(find kene_robot)/launch/robot_description.launch"/>
 
 
 	<!--World File-->
-	<arg name="world_file" default="$(find go_chase_it)/worlds/robot_world.world"/>
+	<arg name="world_file" default="$(find kene_robot)/worlds/robot_world.world"/>
 	
 	<!--Launch Gazebo World-->
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -28,7 +28,7 @@
 
 
 	<!-- Find my robot Description-->
-	<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find go_chase_it)/urdf/robot.xacro'"/>
+	<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find kene_robot)/urdf/robot.xacro'"/>
 	
 
 	<!-- Spawn My Robot -->

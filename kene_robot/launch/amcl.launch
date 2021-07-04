@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- TODO: Add nodes here -->
+
+	<!--Map Server Node :: http://wiki.ros.org/map_server-->
+	<!--add an argument of the path to your map file so that you could easily change the map loaded and avoid typing long paths again-->
+	<arg name="map_file" default="$(find kene_robot)/maps/world_map.yaml"/> 	
+	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
+
+	<!--AMCL Node :: http://wiki.ros.org/amcl-->
+	<!--By default, amcl package will look for the scan topic for LiDAR data. In the simulation, the Hokuyo LiDAR sensor actually publishes on the <YOUR PACKAGE NAME>/laser/scan topic. We will use the remap tag to remap the topic name scan to the actual topic name so that the amcl package could use it! :: http://wiki.ros.org/roslaunch/XML/remap-->
+
+	<node name="amcl" pkg="amcl" type="amcl" output="screen"> 
+		<remap from="scan" to="kene_robot/laser/scan"/>
+		
+		<param name="odom_frame_id" value="odom"/>
+		<param name="odom_model_type" value="diff-corrected"/>
+		<param name="base_frame_id" value="robot_footprint"/>
+		<param name="global_frame_id" value="map"/>
+
+		<!-- If you choose to define initial pose here (Rviz)-->
+		<param name="initial_pose_x" value="1.923170"/>
+		<param name="initial_pose_y" value="2.655713"/>
+	</node>
+
+	<!--Move Base Node-->
+	<node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen" >
+		<remap from="scan" to="kene_robot/laser/scan"/>
+		<param name="base_global_planner" value="navfn/NavfnROS" />
+		<param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/>
+
+		<!-- rosparam holds multiple param. Help makes things more organised -->
+		<rosparam file="$(find kene_robot)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+		<rosparam file="$(find kene_robot)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+		<rosparam file="$(find kene_robot)/config/local_costmap_params.yaml" command="load" />
+		<rosparam file="$(find kene_robot)/config/global_costmap_params.yaml" command="load" />
+		<rosparam file="$(find kene_robot)/config/base_local_planner_params.yaml" command="load" />
+	</node>
+</launch>

@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
 <robot name="robot" xmlns:xacro="http://www.ros.org/wiki/xacro"> 
 
-	<xacro:include filename="$(find go_chase_it)/urdf/robot.gazebo"/>
+	<xacro:include filename="$(find kene_robot)/urdf/robot.gazebo"/>
 	<link name="robot_footprint"></link>
 
 	<joint name="robot_footprint_joint" type="fixed"> 
@@ -190,7 +190,7 @@
 		<visual name="hokuyo_visual">
 			<origin xyz="0 0 0" rpy=" 0 0 0"/>
 			<geometry>
-				<mesh filename="package://go_chase_it/meshes/hokuyo.dae"/>
+				<mesh filename="package://kene_robot/meshes/hokuyo.dae"/>
 			</geometry>
 		</visual> 
 	</link>
