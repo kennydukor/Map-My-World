@@ -11,7 +11,7 @@
 	<!--By default, amcl package will look for the scan topic for LiDAR data. In the simulation, the Hokuyo LiDAR sensor actually publishes on the <YOUR PACKAGE NAME>/laser/scan topic. We will use the remap tag to remap the topic name scan to the actual topic name so that the amcl package could use it! :: http://wiki.ros.org/roslaunch/XML/remap-->
 
 	<node name="amcl" pkg="amcl" type="amcl" output="screen"> 
-		<remap from="scan" to="kene_robot/laser/scan"/>
+		<!--<remap from="scan" to="kene_robot/laser/scan"/>-->
 		
 		<param name="odom_frame_id" value="odom"/>
 		<param name="odom_model_type" value="diff-corrected"/>
@@ -21,11 +21,28 @@
 		<!-- If you choose to define initial pose here (Rviz)-->
 		<param name="initial_pose_x" value="1.923170"/>
 		<param name="initial_pose_y" value="2.655713"/>
+
+		<!-- Tune parameters-->
+		<param name="transform_tolerance" value="0.2"/>
+		<param name="min_particles" value="100"/>
+		<param name="max_particles" value="3000"/>
+		<param name="update_min_a" value="pi/6.0"/>
+		<param name="update_min_d" value="0.1"/>
+		<param name="laser_min_range" value="0.1"/>
+		<param name="laser_max_range" value="10"/>
+		<param name="laser_max_beams" value="30"/>
+		<param name="laser_z_hit" value="0.95"/>
+		<param name="laser_z_rand" value="0.05"/>
+		<param name="odom_alpha1" value="0.02"/>
+		<param name="odom_alpha2" value="0.02"/>
+		<param name="odom_alpha3" value="0.02"/>
+		<param name="odom_alpha4" value="0.02"/>
+		<param name="odom_alpha5" value="0.02"/>
 	</node>
 
 	<!--Move Base Node-->
 	<node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen" >
-		<remap from="scan" to="kene_robot/laser/scan"/>
+		<!--<remap from="scan" to="kene_robot/laser/scan"/>-->
 		<param name="base_global_planner" value="navfn/NavfnROS" />
 		<param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/>
 
