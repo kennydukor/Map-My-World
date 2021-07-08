@@ -30,8 +30,8 @@
 
 		<!-- Tune parameters-->
 		<param name="transform_tolerance" value="0.3"/>
-		<param name="min_particles" value="50"/>
-		<param name="max_particles" value="100"/>
+		<param name="min_particles" value="100"/>
+		<param name="max_particles" value="150"/>
 		<param name="update_min_a" value="0.1"/>
 		<param name="update_min_d" value="0.3"/>
 
