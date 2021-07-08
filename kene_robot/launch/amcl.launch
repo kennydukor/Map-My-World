@@ -13,31 +13,35 @@
 	<node name="amcl" pkg="amcl" type="amcl" output="screen"> 
 		<!--<remap from="scan" to="kene_robot/laser/scan"/>-->
 		
-		<param name="odom_frame_id" value="odom"/>
-		<param name="odom_model_type" value="diff-corrected"/>
-		<param name="base_frame_id" value="robot_footprint"/>
-		<param name="global_frame_id" value="map"/>
-
-		<!-- If you choose to define initial pose here (Rviz)-->
-		<param name="initial_pose_x" value="1.923170"/>
-		<param name="initial_pose_y" value="2.655713"/>
-
-		<!-- Tune parameters-->
-		<param name="transform_tolerance" value="0.2"/>
-		<param name="min_particles" value="100"/>
-		<param name="max_particles" value="3000"/>
-		<param name="update_min_a" value="pi/6.0"/>
-		<param name="update_min_d" value="0.1"/>
-		<param name="laser_min_range" value="0.1"/>
-		<param name="laser_max_range" value="10"/>
-		<param name="laser_max_beams" value="30"/>
-		<param name="laser_z_hit" value="0.95"/>
-		<param name="laser_z_rand" value="0.05"/>
+		<!--Odometry model param-->
 		<param name="odom_alpha1" value="0.02"/>
 		<param name="odom_alpha2" value="0.02"/>
 		<param name="odom_alpha3" value="0.02"/>
 		<param name="odom_alpha4" value="0.02"/>
 		<param name="odom_alpha5" value="0.02"/>
+		<param name="odom_frame_id" value="odom"/>
+		<param name="odom_model_type" value="diff-corrected"/>
+		<param name="base_frame_id" value="robot_footprint"/>
+		<param name="global_frame_id" value="map"/>
+
+		<!-- If you choose to define initial pose here (Rviz) 1.923170, 2.655713-->
+		<param name="initial_pose_x" value="0"/>
+		<param name="initial_pose_y" value="0"/>
+
+		<!-- Tune parameters-->
+		<param name="transform_tolerance" value="0.2"/>
+		<param name="min_particles" value="50"/>
+		<param name="max_particles" value="100"/>
+		<param name="update_min_a" value="0.1"/>
+		<param name="update_min_d" value="0.3"/>
+
+		<!--Laser params-->
+<!--		<param name="laser_min_range" value="0.1"/>
+		<param name="laser_max_range" value="10"/>-->
+		<param name="laser_max_beams" value="30"/>
+		<param name="laser_z_hit" value="0.95"/>
+		<param name="laser_z_rand" value="0.05"/> 
+
 	</node>
 
 	<!--Move Base Node-->
