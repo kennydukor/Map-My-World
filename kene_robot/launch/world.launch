@@ -3,12 +3,12 @@
 <launch>
 
 	<!-- Robot pose -->
-	<arg name="x" default="1.923170"/>
-	<arg name="y" default="2.655713"/> 
+	<arg name="x" default="-0.021352"/>
+	<arg name="y" default="0.052106"/> 
 	<arg name="z" default="0.1"/> 
-	<arg name="roll" default="0"/> 
-	<arg name="pitch" default="0"/> 
-	<arg name="yaw" default="0"/>
+	<arg name="roll" default="0.000003"/> 
+	<arg name="pitch" default="-0.000627"/> 
+	<arg name="yaw" default="1.573971"/>
 
 	<!-- Launch other relevant files-->
 	<include file="$(find kene_robot)/launch/robot_description.launch"/>
