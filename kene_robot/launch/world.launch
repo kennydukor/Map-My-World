@@ -26,7 +26,6 @@
 	</include>
 
 
-
 	<!-- Find my robot Description-->
 	<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find kene_robot)/urdf/robot.xacro'"/>
 	
