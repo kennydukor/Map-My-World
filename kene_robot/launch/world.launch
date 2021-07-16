@@ -38,5 +38,5 @@
 
 	<!--launch rviz-->
 	<!-- args="-d $(find kene_robot)/rviz/default.rviz"-->
-	<node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find kene_robot)/rviz/test.rviz"/>
+	<!-- <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find kene_robot)/rviz/test.rviz"/> -->
 </launch>

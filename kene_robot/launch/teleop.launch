@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-	<node name="teleop" pkg="kene_robot" type="teleop" output="screen" />
+	<node name="teleop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen" />
 	<!-- Modify default linear and angular velocity of robot -->
 	<param name="scale_linear" value="0.3" type="double" />
 	<param name="scale_angular" value="0.2" type="double" />
