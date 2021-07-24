@@ -8,13 +8,13 @@ This project is part of Udacity Robotics Software Engineer Nanodegree.
   <tr>
     <th><p>
            <img src="screenshots/map_world_3.png"
-            alt="3D map" width="277" height="291"></a>
+            alt="3D map" width="300" height="300"></a>
            <br>3D Map
         </p>
     </th>
     <th><p>
            <img src="screenshots/map_world_1.png"
-            alt="Robot Mapping" width="546" height="419"></a>
+            alt="Robot Mapping" width="300" height="300"></a>
            <br>Robot Mapping
       </p>
     </th>
@@ -22,13 +22,13 @@ This project is part of Udacity Robotics Software Engineer Nanodegree.
   <tr>
     <th><p>
            <img src="screenshots/map_world_2.png"
-            alt="2D Map" width="300" height="330"></a>
+            alt="2D Map" width="300" height="300"></a>
            <br>2D Map
       </p>
     </th>
         <th><p>
            <img src="screenshots/map_world_2.png"
-            alt="2D Map" width="300" height="330"></a>
+            alt="2D Map" width="300" height="300"></a>
            <br>2D Map
       </p>
     </th>
