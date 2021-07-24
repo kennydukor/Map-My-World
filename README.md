@@ -13,8 +13,8 @@ This project is part of Udacity Robotics Software Engineer Nanodegree.
         </p>
     </th>
     <th><p>
-           <img src="screenshots/2D_map.png"
-            alt="2D map" width="200" height="200"></a>
+           <img src="screenshots/map_world_1.png"
+            alt="Robot Mapping" width="546" height="419"></a>
            <br>2D Map
       </p>
     </th>
