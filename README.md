@@ -28,7 +28,7 @@ simultaneous localization and mapping (SLAM) of a mobile robot.
       </p>
     </th>
         <th><p>
-           <img src="screenshots/world.png"
+           <img src="screenshots/robot_world.png"
             alt="2D Map" width="300" height="300"></a>
            <br>2D Mapping
       </p>
