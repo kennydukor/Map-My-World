@@ -7,22 +7,22 @@ This project is part of Udacity Robotics Software Engineer Nanodegree.
 <table style="width:100%">
   <tr>
     <th><p>
-           <img src="screenshots/map_world_1.png"
-            alt="3D map" width="400" height="200"></a>
+           <img src="screenshots/map_world_2.png"
+            alt="3D map" width="277" height="291"></a>
            <br>3D Map
         </p>
     </th>
     <th><p>
            <img src="screenshots/map_world_1.png"
             alt="Robot Mapping" width="546" height="419"></a>
-           <br>2D Map
+           <br>Robot Mapping
       </p>
     </th>
   </tr>
   <tr>
     <th><p>
-           <img src="screenshots/occupancy_grid.png"
-            alt="occupancy grid" width="400" height="200"></a>
+           <img src="screenshots/map_world_3.png"
+            alt="occupancy grid" width="734" height="775"></a>
            <br>Occupancy Grid
       </p>
     </th>
