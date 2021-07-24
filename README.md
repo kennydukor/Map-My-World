@@ -7,7 +7,7 @@ This project is part of Udacity Robotics Software Engineer Nanodegree.
 <table style="width:100%">
   <tr>
     <th><p>
-           <img src="screenshots/map_world_2.png"
+           <img src="screenshots/map_world_3.png"
             alt="3D map" width="277" height="291"></a>
            <br>3D Map
         </p>
@@ -22,14 +22,8 @@ This project is part of Udacity Robotics Software Engineer Nanodegree.
   <tr>
     <th><p>
            <img src="screenshots/map_world_3.png"
-            alt="occupancy grid" width="734" height="775"></a>
-           <br>Occupancy Grid
-      </p>
-    </th>
-    <th><p>
-           <img src="screenshots/features.png"
-            alt="features" width="200" height="200"></a>
-           <br>Detected Features
+            alt="2D Map" width="734" height="775"></a>
+           <br>2D Map
       </p>
     </th>
   </tr>
