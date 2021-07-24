@@ -7,7 +7,7 @@ This project is part of Udacity Robotics Software Engineer Nanodegree.
 <table style="width:100%">
   <tr>
     <th><p>
-           <img src="screenshots/3D_map.png"
+           <img src="screenshots/map_world_1.png"
             alt="3D map" width="400" height="200"></a>
            <br>3D Map
         </p>
