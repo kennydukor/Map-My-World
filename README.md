@@ -1,8 +1,9 @@
 # Map My World
 
+Udacity Robotics Software Engineer Nanodegree Program [Project 4]
+
 An application of [rtabmap-ros](http://wiki.ros.org/rtabmap_ros) package for 
 simultaneous localization and mapping (SLAM) of a mobile robot. 
-This project is part of Udacity Robotics Software Engineer Nanodegree.
 
 <table style="width:100%">
   <tr>
@@ -37,7 +38,7 @@ This project is part of Udacity Robotics Software Engineer Nanodegree.
 
 ## Description
 The project consists of the following parts:
-1. A Gazebo world and a mobile robot from this [project](https://github.com/huuanhhuynguyen/RoboND-Go-Chase-It).
+1. A Gazebo world and a mobile robot from this [project](https://github.com/kennydukor/Go-Chase-It).
 2. ROS package: [rtabmap-ros](http://wiki.ros.org/rtabmap_ros)
 
 ## Prerequisites
@@ -50,8 +51,8 @@ The project consists of the following parts:
 1. Clone project and initialize a catkin workspace
 ```
 $ mkdir catkin_ws && cd catkin_ws
-$ git clone https://github.com/huuanhhuynguyen/RoboND-Map-My-World.git
-$ mv RoboND-Map-My-World src
+$ git clone https://github.com/kennydukor/Map-My-World.git
+$ mv Map-My-World src
 $ cd src && catkin_init_workspace
 ```
 
@@ -69,14 +70,14 @@ $ catkin_make
 4. Launch the world and robot
 ```
 $ source devel/setup.bash
-$ roslaunch my_robot world.launch
+$ roslaunch kene_robot world.launch
 ```
 
 5. Open another terminal (Ctrl+Shift+T), and launch the `mapping.launch` file. 
 Here, the rtabmap-ros package will be launched.
 ```
 $ source devel/setup.bash
-$ roslaunch my_robot mapping.launch
+$ roslaunch kene_robot mapping.launch
 ```
 
 6. Open another terminal, and run the `teleop` node.
